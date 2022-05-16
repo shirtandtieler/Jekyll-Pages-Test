@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Demo
+permalink: /demo/
 ---
 
 # h1 Heading 8-)
