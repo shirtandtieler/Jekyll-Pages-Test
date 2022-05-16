@@ -3,6 +3,13 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
-  gtag('config', '{{ site.google_analytics }}');
+  
+  // try to avoid samesite / invalid domain errors (different alt ways found provided just in case)
+  //gtag('create', '{{ site.google_analytics }}', { 'cookieFlags': 'SameSite=None; Secure' });
+  //gtag('set', {cookie_flags: 'SameSite=None;Secure'});
+  gtag('config', '{{ site.google_analytics }}', {
+  cookie_domain: 'shirtandtieler.github.io',
+  cookie_flags: 'SameSite=None;Secure',
+});
+  
 </script>
